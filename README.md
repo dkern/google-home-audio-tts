@@ -1,9 +1,9 @@
-# Google Home Audio, Video & Text
+# Google Home Audio & TTS
 [![GitHub version](https://badge.fury.io/gh/eisbehr-%2Fgoogle-home-audio-tts.svg)](http://github.com/eisbehr-/google-home-audio-tts)
 [![NPM version](https://badge.fury.io/js/google-home-audio-tts.svg)](http://www.npmjs.org/package/google-home-audio-tts)
 [![Dependency version](https://david-dm.org/eisbehr-/google-home-audio-tts.png)](https://david-dm.org/eisbehr-/google-home-audio-tts)
 
-Library to play audio, video and text via [TTS](https://cloud.google.com/text-to-speech/) on Google Home devices.
+Library to play audio and text via [TTS](https://cloud.google.com/text-to-speech/) on Google Home devices.
 
 
 ## Table Of Contents
