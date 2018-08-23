@@ -1,7 +1,7 @@
 {
   "name": "google-home-audio-tts",
   "title": "Google Home Audio & TTS",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Plays Audio and Text via TTS on Google Home devices.",
   "main": "index.js",
   "homepage": "https://github.com/eisbehr-/google-home-audio-tts",

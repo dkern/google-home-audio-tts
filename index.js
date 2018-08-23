@@ -6,9 +6,9 @@ let googletts = require('google-tts-api');
  * initialize device
  * @param {string} ip
  * @param {string} lang
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-function GoogleHomeAVT(ip, lang = 'en') {
+function GoogleHomeAudioTTS(ip, lang = 'en') {
     this.setIp(ip);
     this.setLanguage(lang);
     this.setRestoreVolume(true);
@@ -20,9 +20,9 @@ function GoogleHomeAVT(ip, lang = 'en') {
 /**
  * set device ip
  * @type {string}
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setIp = function(ip) {
+GoogleHomeAudioTTS.prototype.setIp = function(ip) {
     this.ip = ip;
     return this;
 };
@@ -30,9 +30,9 @@ GoogleHomeAVT.prototype.setIp = function(ip) {
 /**
  * device device language
  * @type {string}
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setLanguage = function(language) {
+GoogleHomeAudioTTS.prototype.setLanguage = function(language) {
     this.language = language;
     return this;
 };
@@ -40,9 +40,9 @@ GoogleHomeAVT.prototype.setLanguage = function(language) {
 /**
  * set device volume
  * @param {number} volume
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setVolume = function(volume) {
+GoogleHomeAudioTTS.prototype.setVolume = function(volume) {
     if (volume >= 0.0 && volume <= 1.0) {
         this.volume = volume;
     }
@@ -53,9 +53,9 @@ GoogleHomeAVT.prototype.setVolume = function(volume) {
 /**
  * set device volume
  * @param {boolean} restore
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setRestoreVolume = function(restore) {
+GoogleHomeAudioTTS.prototype.setRestoreVolume = function(restore) {
     this.restoreVolume = restore;
     return this;
 };
@@ -63,9 +63,9 @@ GoogleHomeAVT.prototype.setRestoreVolume = function(restore) {
 /**
  * set stream type
  * @param {string} streamType
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setStreamType = function(streamType) {
+GoogleHomeAudioTTS.prototype.setStreamType = function(streamType) {
     if (streamType === "BUFFERED" || streamType === "LIVE") {
         this.streamType = streamType;
     }
@@ -76,9 +76,9 @@ GoogleHomeAVT.prototype.setStreamType = function(streamType) {
 /**
  * set tts timeout
  * @param {number} ttsTimeout
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setTtsTimeout = function(ttsTimeout) {
+GoogleHomeAudioTTS.prototype.setTtsTimeout = function(ttsTimeout) {
     this.ttsTimeout = ttsTimeout;
     return this;
 };
@@ -86,9 +86,9 @@ GoogleHomeAVT.prototype.setTtsTimeout = function(ttsTimeout) {
 /**
  * set tts voice speed
  * @param {number} ttsSpeed
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.setTtsSpeed = function(ttsSpeed) {
+GoogleHomeAudioTTS.prototype.setTtsSpeed = function(ttsSpeed) {
     this.ttsSpeed = ttsSpeed;
     return this;
 };
@@ -97,9 +97,9 @@ GoogleHomeAVT.prototype.setTtsSpeed = function(ttsSpeed) {
  * let device play text to speech
  * @param {string} message
  * @param {function} [callback]
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.tts = function(message, callback) {
+GoogleHomeAudioTTS.prototype.tts = function(message, callback) {
     googletts(text, this.language, this.ttsSpeed, this.ttsTimeout).then(function(url) {
         this.audio(url, callback);
     }).catch(err => {
@@ -113,9 +113,9 @@ GoogleHomeAVT.prototype.tts = function(message, callback) {
  * play audio file on device
  * @param {string} url
  * @param {function} [callback]
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.audio = function(url, callback) {
+GoogleHomeAudioTTS.prototype.audio = function(url, callback) {
     this.playOnDevice(url, callback);
     return this;
 };
@@ -125,9 +125,9 @@ GoogleHomeAVT.prototype.audio = function(url, callback) {
  * @access private
  * @param {string} url
  * @param {function} [callback]
- * @return {GoogleHomeAVT}
+ * @return {GoogleHomeAudioTTS}
  */
-GoogleHomeAVT.prototype.playOnDevice = function(url, callback) {
+GoogleHomeAudioTTS.prototype.playOnDevice = function(url, callback) {
     let client = new Client();
     let volume = this.volume;
     let originalVolume;
@@ -195,4 +195,4 @@ GoogleHomeAVT.prototype.playOnDevice = function(url, callback) {
     return this;
 };
 
-module.export = GoogleHomeAVT;
+module.export = GoogleHomeAudioTTS;
