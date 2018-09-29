@@ -99,16 +99,22 @@ GoogleHomeAudioTTS.prototype.setTtsSpeed = function(ttsSpeed) {
  * @param {function} [callback]
  * @return {GoogleHomeAudioTTS}
  */
+
 GoogleHomeAudioTTS.prototype.tts = function(message, callback) {
-    googletts(text, this.language, this.ttsSpeed, this.ttsTimeout).then(function(url) {
+    
+    async function fetchURL(){
+        var theURL = await googletts(message, this.language, this.ttsSpeed, this.ttsTimeout);
+        return theURL;
+    } 
+
+    fetchURL().then((url)=> {
         this.audio(url, callback);
+        return this;
     }).catch(err => {
         console.error(err.stack);
+        return this;
     });
-
-    return this;
-};
-
+    
 /**
  * play audio file on device
  * @param {string} url
