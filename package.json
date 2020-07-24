@@ -1,11 +1,11 @@
 {
   "name": "google-home-audio-tts",
   "title": "Google Home Audio & TTS",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Plays Audio and Text via TTS on Google Home devices.",
   "main": "index.js",
-  "homepage": "https://github.com/eisbehr-/google-home-audio-tts",
-  "bugs": "https://github.com/eisbehr-/google-home-audio-tts/issues",
+  "homepage": "https://github.com/dkern/google-home-audio-tts",
+  "bugs": "https://github.com/dkern/google-home-audio-tts/issues",
   "author": {
     "name": "Daniel 'Eisbehr' Kern",
     "email": "jquery@eisbehr.de",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:eisbehr-/google-home-audio-tts.git"
+    "url": "git@github.com:dkern/google-home-audio-tts.git"
   },
   "keywords": [
     "google home",

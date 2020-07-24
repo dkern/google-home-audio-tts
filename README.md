@@ -1,7 +1,7 @@
 # Google Home Audio & TTS
-[![GitHub version](https://badge.fury.io/gh/eisbehr-%2Fgoogle-home-audio-tts.svg)](http://github.com/eisbehr-/google-home-audio-tts)
+[![GitHub version](https://badge.fury.io/gh/dkern%2Fgoogle-home-audio-tts.svg)](http://github.com/dkern/google-home-audio-tts)
 [![NPM version](https://badge.fury.io/js/google-home-audio-tts.svg)](http://www.npmjs.org/package/google-home-audio-tts)
-[![Dependency version](https://david-dm.org/eisbehr-/google-home-audio-tts.png)](https://david-dm.org/eisbehr-/google-home-audio-tts)
+[![Dependency version](https://david-dm.org/dkern/google-home-audio-tts.png)](https://david-dm.org/dkern/google-home-audio-tts)
 
 Library to play audio and text via [TTS](https://cloud.google.com/text-to-speech/) on Google Home devices.
 
@@ -74,7 +74,7 @@ MDNS causes problems on different systems. If there is really need to use MDNS, 
 
 
 ## Bugs / Feature request
-Please [report](http://github.com/eisbehr-/google-home-audio-tts/issues) bugs and feel free to [ask](http://github.com/eisbehr-/google-home-audio-tts/issues) for new features directly on GitHub.
+Please [report](http://github.com/dkern/google-home-audio-tts/issues) bugs and feel free to [ask](http://github.com/dkern/google-home-audio-tts/issues) for new features directly on GitHub.
 
 
 ## License
